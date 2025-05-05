@@ -18,7 +18,7 @@ const Formulario = ({ busqueda, guardarbusqueda, guardarconsultar }) => {
         { label: "México", value: "mx" },
         { label: "Argentina", value: "ar" },
         { label: "Estados Unidos", value: "us" },
-        { label: "Colombia", value: "Co" },
+        { label: "Colombia", value: "co" },
         { label: "España", value: "es" },
         { label: "Perú", value: "pe" },
     ]);
@@ -28,6 +28,7 @@ const Formulario = ({ busqueda, guardarbusqueda, guardarconsultar }) => {
             mostrarAlerta();
             return;
         }
+        guardarbusqueda({ ...busqueda, pais: value });
         guardarconsultar(true);
     };
 
